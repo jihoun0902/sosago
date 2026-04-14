@@ -1,5 +1,6 @@
 def hansu(d):
     if d < 100: return True
+    if d == 1000: return False
     a,b,c = map(int,str(d))
     return (a-b) == (b-c)
 

@@ -1,0 +1,11 @@
+import sys
+input = sys.stdin.readline
+a,b = map(int,input().split())
+d = {}
+
+for i in range(b):
+    id = input().rstrip()
+    d[id] = i
+sort_id = sorted(d.items(),key=lambda x:x[1])
+for i in range(min(a,len(sort_id))):
+    print(sort_id[i][0])
