@@ -1,0 +1,26 @@
+class Animal:
+    def __init__(self, name):
+        self.name = name
+    
+    def speak(self):
+        return "Animal sound"
+    
+class Dog(Animal):
+    def speak(self):
+        return f"{self.name} says Woof!"
+    
+class Cat(Animal):
+    def speak(self):
+        return f"{self.name} says Meow!"
+
+class Elphant(Animal):
+    def speak(self):
+        return f"{self.name} says Toof!"
+
+my_Dog = Dog(name = "Buddy")
+my_Cat = Cat(name = "Whiskers")
+my_Elphant = Elphant(name = "giry")
+
+print(my_Dog.speak())
+print(my_Cat.speak())
+print(my_Elphant.speak())

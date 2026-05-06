@@ -1,0 +1,25 @@
+x = int(input())
+
+print(f"       {x}월")
+print("일 월 화 수 목 금 토")
+
+# 각 달의 날짜 수
+days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+# 이전 달까지 총 일수 계산
+y = sum(days[:x-1])
+
+# 시작 요일 계산
+z = (y + 4) % 7 + 1
+if z == 7:
+    z = 1
+
+# 출력
+print("   " * (z-1), end="")
+
+for i in range(1, days[x-1] + 1):
+    print(f"{i:2}", end=" ")
+    if z >= 7:
+        print()
+        z = 0
+    z += 1
